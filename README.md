@@ -1,10 +1,12 @@
-# PeraSwarm — obstacle_bot_ros2_development
+# PeraSwarm — obstacle botros2 development 
+
+<img width="1920" height="1173" alt="Image" src="https://github.com/user-attachments/assets/4c3434d5-e837-4755-a98c-c113528e859a" />
+
 
 This workspace contains a ROS 2 package and assets for a custom obstacle robot used in a simulation and visualization environment.
 
 Summary
 
-- Repository: e16-3yp-obstacle-bots-for-swarm-robots
 - Workspace folder: `obstacle_bot_ros2_development/obstacle_bots_ws`
 - Key package: `obstacle_bots_ws/src/obstacle_bot_cpp` — contains URDF, meshes, RViz config and a launch file to publish the robot description and open RViz.
 
@@ -86,16 +88,6 @@ Notes & troubleshooting
 - RViz Fixed Frame in the provided config is `world`. If you change the URDF base frame, update RViz or the URDF accordingly.
 - If meshes do not render, ensure the URDF uses `package://obstacle_bot_cpp/meshes/...` paths and the package is installed (`colcon build` + `source`).
 
-Development & contributions
+Development
 
 - If you add runtime dependencies, update `package.xml` and `CMakeLists.txt`.
-- Add a LICENSE file and update `package.xml` to include the license entry before publishing.
-- Consider adding CI that builds the workspace on push (optional).
-
-Next steps I can help with
-
-- Update `package.xml` to set license and correct maintainer details.
-- Add a small spawn launch file that supports both `gazebo_ros` and `ros_gz` (tell me which simulator you prefer).
-- Create a README inside `obstacle_bots_ws` with step-by-step examples for end users (if you want a workspace-level quickstart instead of this top-level README).
-
-If you'd like any of the above, tell me your ROS 2 distro and whether you use Gazebo Classic or ros_gz (Ignition). I can then tailor the README and add spawn launch files.
