@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="obstacle_bot">
+
+  <link name="world"/>
+
+  <joint name="world_to_base" type="fixed"> 
+  <parent link="world"/> 
+  <child link="Base"/> 
+  <origin xyz="0 0 0" rpy="0 0 0"/> 
+  </joint>
+
+  <link
+    name="Base">
+    <inertial>
+      <origin
+        xyz="0.000347860221219569 -0.00022078659827918 0.02013419400868"
+        rpy="0 0 0" />
+      <mass
+        value="0.158789661904281" />
+      <inertia
+        ixx="0.000120955908449999"
+        ixy="-5.54901389592471E-09"
+        ixz="2.11621830995395E-12"
+        iyy="0.000106976801620136"
+        iyz="1.17835285284199E-08"
+        izz="0.000199911261698313" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://obstacle_bot_cpp/meshes/Base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.3" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://obstacle_bot_cpp/meshes/Base.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Right wheel -->
+
+  <link
+    name="Roda_R">
+    <inertial>
+      <origin
+        xyz="-1.61192384686426E-05 5.92261211948553E-07 -0.00526077489261616"
+        rpy="0 0 0" />
+      <mass
+        value="0.00450889108722995" />
+      <inertia
+        ixx="3.66772266501771E-07"
+        ixy="-5.03799170776947E-12"
+        ixz="5.78564586393147E-11"
+        iyy="3.66632511331917E-07"
+        iyz="-2.01139615867715E-12"
+        izz="7.05171812889771E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://obstacle_bot_cpp/meshes/Roda_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://obstacle_bot_cpp/meshes/Roda_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="Roda_R"
+    type="continuous">
+    <origin
+      xyz="0 -0.0403 0.008"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Base" />
+    <child
+      link="Roda_R" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+
+  <!-- Left wheel -->
+
+  <link
+    name="Roda_L">
+    <inertial>
+      <origin
+        xyz="-1.59382893452631E-05 2.48023283061505E-06 0.00344092449495452"
+        rpy="0 0 0" />
+      <mass
+        value="0.00450889108722995" />
+      <inertia
+        ixx="3.66769166430637E-07"
+        ixy="-2.11901365590379E-11"
+        ixz="5.72204092122228E-11"
+        iyy="3.66635611403051E-07"
+        iyz="-8.788645537468E-12"
+        izz="7.05171812889771E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://obstacle_bot_cpp/meshes/Roda_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://obstacle_bot_cpp/meshes/Roda_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="Roda_L"
+    type="continuous">
+    <origin
+      xyz="0 0.0403 0.008"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Base" />
+    <child
+      link="Roda_L" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
