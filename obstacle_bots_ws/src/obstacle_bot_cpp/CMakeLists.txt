@@ -22,7 +22,7 @@ install(DIRECTORY config
 )
 
 # Install URDF files
-install(DIRECTORY urdf
+install(DIRECTORY model
   DESTINATION share/${PROJECT_NAME}
 )
 

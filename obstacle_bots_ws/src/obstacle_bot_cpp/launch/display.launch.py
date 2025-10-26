@@ -8,7 +8,7 @@ def generate_launch_description():
     pkg_share_dir = get_package_share_directory('obstacle_bot_cpp')
     
     # URDF file path
-    urdf_file = os.path.join(pkg_share_dir, 'urdf', 'obstacle_bot.urdf')
+    urdf_file = os.path.join(pkg_share_dir, 'model', 'obstacle_bot.urdf')
     
     # Read URDF contents
     with open(urdf_file, 'r') as infp:

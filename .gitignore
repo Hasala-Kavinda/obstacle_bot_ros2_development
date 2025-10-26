@@ -5,4 +5,7 @@ obstacle_bots_ws/install
 obstacle_bots_ws/src/obstacle_bot_cpp/.vscode
 obstacle_bots_ws/src/obstacle_bot_cpp/log
 obstacle_bots_ws/src/obstacle_bot_cpp/launch/.vscode
-
+build
+install
+log
+.vscode

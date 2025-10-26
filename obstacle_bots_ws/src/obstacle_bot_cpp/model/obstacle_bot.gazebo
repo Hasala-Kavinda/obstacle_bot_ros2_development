@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+
+<!-- Gazebo addition description of the different parts of the robot. -->
+
+
+<robot>
+
+<!-- mul and mu2 are friction coefficients -->
+
+<gazebo reference="Base">
+  <mu1>0.1</mu1>
+  <mu2>0.1</mu2>
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <minDepth>0.001</minDepth>
+  <maxVel>1.0</maxVel>
+  <material>Gazebo/Black</material>
+</gazebo>
+
+
+<gazebo reference="Right_wheel">
+  <mu1>1.0</mu1>
+  <mu2>1.0</mu2>
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <minDepth>0.001</minDepth>
+  <maxVel>1.0</maxVel>
+  <material>Gazebo/White</material>
+</gazebo>
+
+<gazebo reference="Left_wheel">
+  <mu1>1.0</mu1>
+  <mu2>1.0</mu2>
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <minDepth>0.001</minDepth>
+  <maxVel>1.0</maxVel>
+  <material>Gazebo/White</material>
+</gazebo>
+
+<gazebo reference="Caster_wheel">
+  <mu1>0.01</mu1>
+  <mu2>0.01</mu2>
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <minDepth>0.001</minDepth>
+  <maxVel>1.0</maxVel>
+  <material>Gazebo/Blue</material>
+</gazebo>
+
+<gazebo reference="Front_caster_wheel">
+  <mu1>0.01</mu1>
+  <mu2>0.01</mu2>
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <minDepth>0.001</minDepth>
+  <maxVel>1.0</maxVel>
+  <material>Gazebo/Blue</material>
+</gazebo>
+
+<gazebo reference="Rear_caster_wheel">
+  <mu1>0.01</mu1>
+  <mu2>0.01</mu2>
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <minDepth>0.001</minDepth>
+  <maxVel>1.0</maxVel>
+  <material>Gazebo/Blue</material>
+</gazebo>
+
+
+<!-- Controller for the differential drive robot -->
+<gazebo>
+  <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
+   
+   <ros>
+    <namespace></namespace>
+   </ros>
+
+   <!-- Number of wheel pairs -->
+    <num_wheel_pairs>1</num_wheel_pairs>
+
+    <!-- Left wheel -->
+    <left_joint>Left_wheel_joint</left_joint>
+
+    <!-- Right wheel -->
+    <right_joint>Right_wheel_joint</right_joint>
+
+    <!--kinematics-->
+    <wheel_separation>${base_length + wheel_length}</wheel_separation>
+    <wheel_diameter>${2 * wheel_radius}</wheel_diameter>
+  
+
+  <!--limits-->
+  <max_wheel_torque>1000</max_wheel_torque>
+  <max_wheel_acceleration>7.0</max_wheel_acceleration>
+
+  <!--output-->
+
+  <publish_odom>true</publish_odom>
+  <publish_odom_tf>true</publish_odom_tf>
+  <publish_wheel_tf>true</publish_wheel_tf>
+
+  <odometry_frame>odom</odometry_frame>
+  <robot_wheel_rf>world</robot_wheel_rf>
+
+   </plugin>
+</gazebo>
+
+</robot>
