@@ -104,19 +104,6 @@ obstacle_bot_cpp/
 ## Development notes
 
 - The URDF was exported from SolidWorks. If you change meshes or the URDF, update the `install(DIRECTORY ...)` entries in `CMakeLists.txt` if you move or rename files.
-- Add real package dependencies to `package.xml` and update the `description` and `license` fields before publishing.
 
-## Contributing
-
-Feel free to open issues or pull requests. When contributing:
-
-- Provide a clear description of the change.
-- If you add runtime dependencies, add them to `package.xml` and update `CMakeLists.txt` accordingly.
-
-## License
-
-This repository currently has a placeholder license in `package.xml`. Add a proper license file (e.g., `LICENSE`) and update `package.xml` before publishing.
-
----
 
 If you'd like, I can also add a top-level README for the whole `obstacle_bot_ros2_development` workspace that explains how the ROS workspace integrates with the rest of your project (simulator, controllers, nodes), and include example commands for Gazebo+ros_gz_bridge. Tell me which ROS distro you use and whether you use Gazebo Classic or Gazebo/Robot Gazebo (ros_gz).
