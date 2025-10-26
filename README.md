@@ -2,7 +2,6 @@
 
 <img width="1920" height="1173" alt="Image" src="https://github.com/user-attachments/assets/4c3434d5-e837-4755-a98c-c113528e859a" />
 
-
 This workspace contains a ROS 2 package and assets for a custom obstacle robot used in a simulation and visualization environment.
 
 Summary
@@ -36,7 +35,7 @@ Build the ROS workspace
 1. Open a terminal and go to the workspace root:
 
 ```bash
-cd /home/zoom/Desktop/PeraSwarm/obstacle_bot_ros2_development/obstacle_bots_ws
+cd ...../obstacle_bot_ros2_development/obstacle_bots_ws
 ```
 
 2. Source your ROS 2 distro and build:
